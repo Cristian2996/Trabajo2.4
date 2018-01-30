@@ -63,24 +63,30 @@ public class frmMenuPrincipal extends JFrame {
         mniBuscaIngreso = new JMenuItem("Busca");
         mniListaIngreso = new JMenuItem("Lista");
         
-//        mniListaEstudiante.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                mniListaEstudianteActionPerdormed(e);
-//            }
-//        });
+        mniListaIngreso.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mniListaIngresoActionPerdormed(e);
+            }
+        });
 
         mniNuevoEgreso = new JMenuItem("Nuevo");
-//        mniNuevoEgreso.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                mniNuevoEgresoActionPerformed(e);
-//            }
-//        });
+        mniNuevoEgreso.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mniNuevoEgresoActionPerformed(e);
+            }
+        });
         mniModificaEgreso = new JMenuItem("Modifica");
         mniEliminaEgreso = new JMenuItem("Elimina");
         mniBuscaEgreso = new JMenuItem("Busca");
         mniListaEgreso = new JMenuItem("Lista");
+        mniListaEgreso.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mniListaEgresoActionPerdormed(e);
+            }
+        });
         
         mniNuevoCliente = new JMenuItem("Nuevo");
         mniNuevoCliente.addActionListener(new ActionListener() {
@@ -144,12 +150,12 @@ public class frmMenuPrincipal extends JFrame {
         dkpEscritorio.add(frm);
         frm.setVisible(true);
     }
-//
-//    public void mniNuevoCursoActionPerformed(ActionEvent e) {
-//        frmNuevoCurso frm = new frmNuevoCurso();
-//        dkpEscritorio.add(frm);
-//        frm.setVisible(true);
-//    }
+
+    public void mniNuevoEgresoActionPerformed(ActionEvent e) {
+        frmNuevoEgreso frm = new frmNuevoEgreso();
+        dkpEscritorio.add(frm);
+        frm.setVisible(true);
+    }
 //
     public void mniNuevoClienteActionPerformed(ActionEvent e) {
         frmNuevoCliente frm = new frmNuevoCliente();
@@ -158,18 +164,18 @@ public class frmMenuPrincipal extends JFrame {
     }
     
 
-//    public void mniListaEstudianteActionPerdormed(ActionEvent e)
-//    {
-//        frmListaEstudiante frm = new frmListaEstudiante();
-//        dkpEscritorio.add(frm);
-//        frm.setVisible(true);
-//    }
-//    public void mniListaDocenteActionPerdormed(ActionEvent e)
-//    {
-//        frmListaDocente frm = new frmListaDocente();
-//        dkpEscritorio.add(frm);
-//        frm.setVisible(true);
-//    }
+    public void mniListaEgresoActionPerdormed(ActionEvent e)
+    {
+        frmListaEgreso frm = new frmListaEgreso();
+        dkpEscritorio.add(frm);
+        frm.setVisible(true);
+    }
+    public void mniListaIngresoActionPerdormed(ActionEvent e)
+    {
+        frmListaIngreso frm = new frmListaIngreso();
+        dkpEscritorio.add(frm);
+        frm.setVisible(true);
+    }
     public static void main(String[] args) {
         frmMenuPrincipal frmMEnu = new frmMenuPrincipal();
         frmMEnu.setVisible(true);
