@@ -33,7 +33,7 @@ public class frmNuevoCliente extends JInternalFrame{
     JPanel pnlCentral;
     JPanel pnlPie;
     public frmNuevoCliente() {
-        this.setSize(300, 300);
+        this.setSize(300, 400);
         this.setLayout(new BorderLayout());
         this.setClosable(true);
         pnlCentral= new JPanel();

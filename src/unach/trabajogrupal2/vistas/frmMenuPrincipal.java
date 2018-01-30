@@ -86,7 +86,7 @@ public class frmMenuPrincipal extends JFrame {
         mniNuevoCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mniClienteActionPerformed(e);
+                mniNuevoClienteActionPerformed(e);
             }
         });
         mniModificaCliente = new JMenuItem("Modifica");
@@ -151,8 +151,8 @@ public class frmMenuPrincipal extends JFrame {
 //        frm.setVisible(true);
 //    }
 //
-    public void mniClienteActionPerformed(ActionEvent e) {
-        frmCliente frm = new frmCliente();
+    public void mniNuevoClienteActionPerformed(ActionEvent e) {
+        frmNuevoCliente frm = new frmNuevoCliente();
         dkpEscritorio.add(frm);
         frm.setVisible(true);
     }
