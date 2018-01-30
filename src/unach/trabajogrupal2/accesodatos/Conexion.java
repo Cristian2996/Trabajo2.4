@@ -4,9 +4,9 @@ import java.util.*;
 public class Conexion {
     Scanner entrada = new Scanner(System.in);
     String driver = "org.postgresql.Driver";
-    String url = "jdbc:postgresql://172.30.3.168:5433/subversion2";
-    String usr = "usr_academico";
-    String pass = "123456";
+    String url = "jdbc:postgresql://localhost:5433/tgrupo";
+    String usr = "cristian";
+    String pass = "1234";
     Connection con = null;
       public void conectar() {
         try {
