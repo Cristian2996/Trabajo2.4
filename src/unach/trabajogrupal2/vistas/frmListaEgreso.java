@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package unach.trabajogrupal2.vistas;
 
 import java.awt.BorderLayout;
@@ -14,17 +9,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import unach.trabajogrupal2.dao.IIngreso;
-import unach.trabajogrupal2.entidades.Ingreso;
-import unach.trabajogrupal2.impl.ImplIngreso;
+import unach.trabajogrupal2.dao.IEgreso;
+import unach.trabajogrupal2.entidades.Egreso;
+import unach.trabajogrupal2.impl.ImplEgreso;
 
-public class frmListaIngreso extends JInternalFrame {
+public class frmListaEgreso extends JInternalFrame {
     
     JLabel lblTitulo;
     JTable tabla;
     DefaultTableModel modelo;
     JScrollPane jscTabla;
-    public frmListaIngreso(){
+    public frmListaEgreso(){
         this.setSize(800, 600);
         this.setLayout(new BorderLayout());
         this.setClosable(true);
@@ -42,43 +37,20 @@ public class frmListaIngreso extends JInternalFrame {
         modelo.addColumn("Código");
         modelo.addColumn("Valor ");
         modelo.addColumn("Detalle");
-        List<Ingreso> lista = new ArrayList<>();
+        List<Egreso> lista = new ArrayList<>();
         try{
-            IIngreso ingresoDao = new ImplIngreso();
-            lista = ingresoDao.obtener();
+            IEgreso egresoDao = new ImplEgreso();
+            lista = egresoDao.obtener();
         
         }catch (Exception e){
         
         JOptionPane.showMessageDialog(this, e.getMessage(),"Error",
                 JOptionPane.ERROR_MESSAGE);
         }
-        for(Ingreso est : lista){
-            modelo.addRow(new Object[]{est.getCodigoin(), est.getValor(),
+        for(Egreso est : lista){
+            modelo.addRow(new Object[]{est.getCodigoeg(), est.getValor(),
             est.getDetalle()});
         }
-        
         tabla.setModel(modelo);
     }
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
