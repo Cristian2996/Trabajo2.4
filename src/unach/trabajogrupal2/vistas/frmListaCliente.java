@@ -22,7 +22,7 @@ public class frmListaCliente extends JInternalFrame {
 
 public frmListaCliente(){
     this.setSize(800,600);
-    this.setLayout(new BorderLayuot());
+    this.setLayout(new BorderLayout());
     this.setClosable(true);
     
     
