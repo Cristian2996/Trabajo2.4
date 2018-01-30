@@ -40,8 +40,8 @@ public class frmNuevoIngreso extends JInternalFrame{
         this.setClosable(true);
         pnlCentral= new JPanel();
         pnlPie= new JPanel();
-        pnlCentral.setLayout(new GridLayout(11, 2, 5, 5));
-        pnlPie.setLayout(new GridLayout(2,3,5,5));
+        pnlCentral.setLayout(new GridLayout(10, 2, 5, 5));
+        pnlPie.setLayout(new GridLayout(1,2,5,5));
         
         codigo= new JLabel("Codigo: ");
         valor= new JLabel("Valor:");
@@ -60,6 +60,7 @@ public class frmNuevoIngreso extends JInternalFrame{
         pnlCentral.add(valor);
         pnlCentral.add(txtvalor);
         pnlCentral.add(detalle);
+        pnlCentral.add(txtdetalle);
            btnAceptar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

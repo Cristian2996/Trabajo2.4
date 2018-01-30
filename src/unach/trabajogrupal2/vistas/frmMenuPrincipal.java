@@ -52,12 +52,12 @@ public class frmMenuPrincipal extends JFrame {
         mnEgreso = new JMenu("Egreso");
         mnCliente = new JMenu("Cliente");
         mniNuevoIngreso = new JMenuItem("Nuevo");
-//        mniNuevoIngreso.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                mniNuevoIngresoActionPerformed(e);
-//            }
-//        });
+        mniNuevoIngreso.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mniNuevoIngresoActionPerformed(e);
+            }
+        });
         mniModificaIngreso = new JMenuItem("Modifica");
         mniEliminaIngreso = new JMenuItem("Elimina");
         mniBuscaIngreso = new JMenuItem("Busca");
@@ -139,11 +139,11 @@ public class frmMenuPrincipal extends JFrame {
         System.exit(0);
     }
 
-//    public void mniNuevoEstudianteActionPerformed(ActionEvent e) {
-//        frmNuevoEstudiante frm = new frmNuevoEstudiante();
-//        dkpEscritorio.add(frm);
-//        frm.setVisible(true);
-//    }
+    public void mniNuevoIngresoActionPerformed(ActionEvent e) {
+        frmNuevoIngreso frm = new frmNuevoIngreso();
+        dkpEscritorio.add(frm);
+        frm.setVisible(true);
+    }
 //
 //    public void mniNuevoCursoActionPerformed(ActionEvent e) {
 //        frmNuevoCurso frm = new frmNuevoCurso();
