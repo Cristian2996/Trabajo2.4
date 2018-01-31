@@ -4,7 +4,7 @@ import java.util.*;
 public class Conexion {
     Scanner entrada = new Scanner(System.in);
     String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    String url = "jdbc:sqlserver://192.168.100.5:1433;databaseName=tgrupo";
+    String url = "jdbc:sqlserver://172.30.63.32:1433;databaseName=tgrupo";
     String usr = "cris";
     String pass = "1234";
     Connection con = null;
