@@ -19,12 +19,13 @@ import unach.trabajogrupal2.entidades.Ingreso;
 import unach.trabajogrupal2.impl.ImplIngreso;
 
 public class frmListaIngreso extends JInternalFrame {
-    
+
     JLabel lblTitulo;
     JTable tabla;
     DefaultTableModel modelo;
     JScrollPane jscTabla;
-    public frmListaIngreso(){
+
+    public frmListaIngreso() {
         this.setSize(800, 600);
         this.setLayout(new BorderLayout());
         this.setClosable(true);
@@ -34,51 +35,31 @@ public class frmListaIngreso extends JInternalFrame {
         this.add(lblTitulo, BorderLayout.NORTH);
         this.add(jscTabla, BorderLayout.CENTER);
         cargarTabla();
-        
-    }    
-    public void cargarTabla(){
+
+    }
+
+    public void cargarTabla() {
         //modelo de datos de la tabla
         modelo = new DefaultTableModel();
         modelo.addColumn("Código");
+        modelo.addColumn("Cliente");
         modelo.addColumn("Valor ");
         modelo.addColumn("Detalle");
         List<Ingreso> lista = new ArrayList<>();
-        try{
+        try {
             IIngreso ingresoDao = new ImplIngreso();
             lista = ingresoDao.obtener();
-        
-        }catch (Exception e){
-        
-        JOptionPane.showMessageDialog(this, e.getMessage(),"Error",
-                JOptionPane.ERROR_MESSAGE);
+
+        } catch (Exception e) {
+
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
-        for(Ingreso est : lista){
-            modelo.addRow(new Object[]{est.getCodigoin(), est.getValor(),
-            est.getDetalle()});
+        for (Ingreso est : lista) {
+            modelo.addRow(new Object[]{est.getCodigoin(),est.getCliente(), est.getValor(),
+                est.getDetalle()});
         }
         
         tabla.setModel(modelo);
     }
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-

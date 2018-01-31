@@ -3,9 +3,9 @@ import java.sql.*;
 import java.util.*;
 public class Conexion {
     Scanner entrada = new Scanner(System.in);
-    String driver = "org.postgresql.Driver";
-    String url = "jdbc:postgresql://localhost:5433/tgrupo";
-    String usr = "cristian";
+    String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    String url = "jdbc:sqlserver://192.168.100.5:1433;databaseName=tgrupo";
+    String usr = "cris";
     String pass = "1234";
     Connection con = null;
       public void conectar() {
@@ -74,5 +74,3 @@ public class Conexion {
         }
     }
 }
-
-
