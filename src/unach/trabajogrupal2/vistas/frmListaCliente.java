@@ -29,7 +29,7 @@ public class frmListaCliente extends JInternalFrame {
         tabla = new JTable();
         jscTabla = new JScrollPane(tabla);
         this.add(lbTitulo, BorderLayout.NORTH);
-        this.add(tabla, BorderLayout.CENTER);
+        this.add(jscTabla, BorderLayout.CENTER);
         cargarTabla();
 
     }
